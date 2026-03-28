@@ -1,0 +1,449 @@
+/* ============================================
+   ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ
+   ============================================ */
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: #39cdb2;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+/* ============================================
+   ОБЩИЕ СТИЛИ ДЛЯ ШАПКИ ВСЕХ СТРАНИЦ
+   ============================================ */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.header-left img {
+    width: 150px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.header-left img:hover {
+    transform: scale(1.05);
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-right a {
+    color: #0e524b;
+    text-decoration: underline;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.header-right a:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+.header-right span {
+    margin-right: 15px;
+    opacity: 0.9;
+    color: #0e524b;
+}
+
+/* ============================================
+   ОБЩИЕ СТИЛИ ДЛЯ СТРАНИЦ С ФОРМАМИ (create, register, login)
+   ============================================ */
+
+body.create, body.register, body.login {
+    background: #7edac8;
+    padding: 0;
+}
+
+body.create .content,
+body.register .content,
+body.login .content {
+    border: 3px solid #baefe4;
+    border-radius: 20px;
+    background: rgba(186, 239, 228, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    margin: 40px auto;
+    backdrop-filter: blur(2px);
+}
+
+body.create h1,
+body.register h1,
+body.login h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #18755c;
+}
+
+body.create form,
+body.register form,
+body.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body.create input[type="text"],
+body.create input[type="email"],
+body.create textarea,
+body.register input[type="text"],
+body.register input[type="email"],
+body.register input[type="password"],
+body.login input[type="text"],
+body.login input[type="password"] {
+    padding: 12px;
+    border: 1px solid #18755c;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #18755c;
+    font-size: 16px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+body.create input[type="text"]:focus,
+body.create input[type="email"]:focus,
+body.create textarea:focus,
+body.register input[type="text"]:focus,
+body.register input[type="email"]:focus,
+body.register input[type="password"]:focus,
+body.login input[type="text"]:focus,
+body.login input[type="password"]:focus {
+    outline: none;
+    border-color: #0a3d2f;
+}
+
+body.create textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+body.create input[type="submit"],
+body.register input[type="submit"],
+body.login input[type="submit"] {
+    background: #18755c;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 200px;
+    margin: 0 auto;
+}
+
+body.create input[type="submit"]:hover,
+body.register input[type="submit"]:hover,
+body.login input[type="submit"]:hover {
+    background: #0e5e49;
+}
+
+body.create .error,
+body.register .error,
+body.login .error {
+    color: #ff6b6b;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ff6b6b;
+    border-radius: 5px;
+    background: rgba(255, 107, 107, 0.1);
+    text-align: center;
+}
+
+/* Специфичные стили для страниц регистрации и входа */
+body.register .content,
+body.login .content {
+    width: 500px;
+}
+
+body.register .login-link,
+body.login .register-link {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+body.register .login-link a,
+body.login .register-link a {
+    color: #18755c;
+    text-decoration: underline;
+}
+
+/* ============================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ СТАТЬИ (article)
+   ============================================ */
+
+body.article {
+    background: #7edac8;
+    color: #0e524b;
+    padding: 0;
+}
+
+body.article .article-content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.article h1 {
+    color: #0e524b;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+body.article .article-info {
+    overflow: hidden;
+    margin-bottom: 20px;
+    color: #0e524b;
+}
+
+body.article .article-author {
+    width: 50%;
+    float: left;
+}
+
+body.article .article-created-date {
+    text-align: right;
+}
+
+body.article .article-text {
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #0e524b;
+}
+
+/* ============================================
+   СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ (archive) — С ПОДСВЕТКОЙ ПОСТОВ
+   ============================================ */
+
+body.archive {
+    background: #7edac8;
+    color: #18755c;
+}
+
+body.archive a {
+    color: #ffffff;
+}
+
+/* Шапка главной страницы — переопределяем общие стили */
+body.archive .header {
+    background: #baefe4;
+    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: block;
+}
+
+body.archive .logo {
+    display: block;
+    width: 400px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+}
+
+body.archive .header-text-area {
+    float: left;
+    width: 520px;
+}
+
+body.archive .service-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #105543;
+    margin: 50px 0 200px 0;
+}
+
+body.archive .register-link {
+    display: inline-block;
+    margin-right: 70px;
+    color: #00a176;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+body.archive .register-link:hover {
+    text-decoration: underline;
+}
+
+/* Иконки для параллакса */
+body.archive .icons-for-parallax {
+    float: right;
+    position: relative;
+    width: 400px;
+    height: 530px;
+}
+
+body.archive .icons-for-parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body.archive .icon-for-parallax-first {
+    width: 200px;
+    z-index: 3;
+    margin-top: 200px;
+}
+
+body.archive .icon-for-parallax-second {
+    width: 175px;
+    z-index: 2;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+body.archive .icon-for-parallax-third {
+    width: 150px;
+    z-index: 1;
+    margin-left: 160px;
+}
+
+/* Контент (список статей) */
+body.archive .archive {
+    width: 960px;
+    margin: 0 auto;
+    background: transparent;
+    padding: 10px;
+    clear: both;
+}
+
+/* КАРТОЧКА СТАТЬИ — С ПОДСВЕТКОЙ */
+body.archive .one-post {
+    position: relative;
+    background: #baefe4;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #107359;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+body.archive .one-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ТЕНЬ ДЛЯ ПОДСВЕТКИ — ЧЕРНАЯ, ПОЛУПРОЗРАЧНАЯ */
+body.archive .one-post-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: 1;
+    opacity: 0;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* ПРИ НАВЕДЕНИИ — ТЕНЬ СТАНОВИТСЯ ВИДИМОЙ */
+body.archive .one-post:hover .one-post-shadow {
+    opacity: 0.15;
+}
+
+/* КОНТЕНТ — ВЫШЕ ТЕНИ */
+body.archive .post-header,
+body.archive .article-info,
+body.archive .article-text {
+    position: relative;
+    z-index: 2;
+}
+
+body.archive .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+body.archive .post-header .post-title {
+    margin: 0;
+}
+
+body.archive .post-title a {
+    color: #135f4b;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+body.archive .post-title a:hover {
+    text-decoration: underline;
+    color: #012b23;
+    transform: translateX(3px);
+}
+
+body.archive .fold-button {
+    background: rgba(200, 226, 220, 0.826);
+    border: 1px solid rgba(10, 61, 47, 0.3);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #0e6e55;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+body.archive .fold-button:hover {
+    background: rgba(126, 185, 169, 0.951);
+    transform: scale(1.02);
+}
+
+body.archive .article-info {
+    color: #0a3d2f;
+    font-size: 14px;
+    margin: 10px 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+body.archive .article-author {
+    width: 50%;
+    float: left;
+}
+
+body.archive .article-created-date {
+    text-align: right;
+}
+
+body.archive .article-text {
+    color: #0a3d2f;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+body.archive .one-post.folded .article-info,
+body.archive .one-post.folded .article-text {
+    display: none;
+}

@@ -1,0 +1,175 @@
+/* ============================================
+   ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ
+   ============================================ */
+
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка — общие стили для всех страниц */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.header-left img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+.header-right a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.header-right a:first-child {
+    margin-left: 0;
+}
+
+/* Общие стили для ссылок */
+a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Общие стили для контента */
+.archive, .article-content, .content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Общие стили для информации о статье */
+.article-info {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+}
+
+.article-created-date {
+    text-align: right;
+}
+
+.article-text {
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* ============================================
+   СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ (archive)
+   ============================================ */
+
+body.archive {
+    padding: 20px;
+}
+
+body.archive .one-post {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+body.archive .post-title a {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+body.archive .article-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+body.archive .article-text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* ============================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ СОЗДАНИЯ СТАТЬИ (create)
+   ============================================ */
+
+body.create .content {
+    padding: 40px 0;
+}
+
+body.create h1 {
+    margin-bottom: 30px;
+}
+
+body.create form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body.create input[type="text"],
+body.create textarea {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+body.create input[type="text"]:focus,
+body.create textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+body.create textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+body.create input[type="submit"] {
+    background: #ffffff;
+    color: #1abc9c;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 200px;
+}
+
+body.create input[type="submit"]:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body.create .error {
+    color: #ffcccc;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ffcccc;
+    border-radius: 5px;
+    background: rgba(255, 0, 0, 0.2);
+}

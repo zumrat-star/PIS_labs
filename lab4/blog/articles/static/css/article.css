@@ -1,0 +1,125 @@
+/* ============================================
+   ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ
+   ============================================ */
+
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Общие стили для всех изображений логотипа */
+.header img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+/* Общие стили для всех ссылок */
+a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ (archive)
+   ============================================ */
+
+body.archive {
+    padding: 20px;
+}
+
+body.archive .header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+body.archive .header img {
+    margin: 0 auto;
+}
+
+body.archive .one-post {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+body.archive .post-title a {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+body.archive .article-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+body.archive .article-text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ============================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ СТАТЬИ (article)
+   ============================================ */
+
+body.article {
+    padding: 0;
+}
+
+body.article .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+body.article .header-left {
+    flex-shrink: 0;
+}
+
+body.article .header-right a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+body.article .article-content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+body.article .article-info {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+body.article .article-author {
+    width: 50%;
+    float: left;
+}
+
+body.article .article-created-date {
+    text-align: right;
+}
+
+body.article .article-text {
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+

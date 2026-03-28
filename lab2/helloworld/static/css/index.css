@@ -1,0 +1,36 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+p, h4 {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+ul, ol {
+    margin: 0;
+}
+
+table tr td {
+    padding: 5px;
+}
+
+img {
+    height: 100px;
+    width: 200px;
+}
